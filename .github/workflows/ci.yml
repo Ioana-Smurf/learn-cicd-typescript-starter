@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    branches: [main, addtests]
 
 jobs:
   
@@ -45,6 +45,6 @@ jobs:
 
       - name: style-check
         run : npm run format:check 
-        
+
       - name: run lint
-        run : npm run lint
+        run : npm run lint -- --max-warnings=0
