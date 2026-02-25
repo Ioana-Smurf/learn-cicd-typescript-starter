@@ -44,4 +44,7 @@ jobs:
         run: npm ci
 
       - name: style-check
-        run : npm run format:check
+        run : npm run format:check 
+        
+      - name: run lint
+        run : npm run lint
